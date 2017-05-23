@@ -49,7 +49,7 @@
 // AF_UNIX socket, the socket will refer to /dev/null after each
 // fork, and all operations on it will fail.
 static const char* kPathWhitelist[] = {
-  "/dev/__properties__",  /* Only on Android Lollipop and below. */
+  "/dev/properties",  /* Only on Android Lollipop and below. */
   "/dev/null",
   "/dev/socket/zygote",
   "/dev/socket/zygote_secondary",
@@ -58,7 +58,7 @@ static const char* kPathWhitelist[] = {
   "/system/framework/framework-res.apk",
   "/dev/urandom",
   "/dev/ion",
-  "@netlink@",
+  "@NETLINK@",
   "/system/framework/org.cyanogenmod.platform-res.apk",
   "/proc/ged",
 #ifdef PATH_WHITELIST_EXTRA_H
